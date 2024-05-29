@@ -1,0 +1,38 @@
+@mixin flex {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav{
+  background-color: #333;
+  color: white;
+  font-size: large;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  ul{
+      @include flex();
+      list-style-type: none;
+      font-size: large;
+      li{
+          text-transform: capitalize;
+          display: inline;
+          margin-right: 5px;
+          font-weight: bold;
+          padding: 0.5rem 1rem;
+          border-radius: 8px;
+          box-shadow: 4px 4px 10px rgb(0, 0, 0,0.3);
+          a{
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+        
+            }
+            &:hover{
+                background-color: blue;
+                transition: 0.2s ease-in;
+            }
+        }
+
+    }
+}
